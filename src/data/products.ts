@@ -1,0 +1,68 @@
+import type { Product } from "../types";
+
+export const products: Product[] = [
+    {
+        id: '1',
+        name: 'Wireless Headphones',
+        price: 89.99,
+        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400',
+        description: 'Premium noise-cancelling wireless headphones',
+        category: 'Electronics',
+    },
+    {
+        id: '2',
+        name: 'Running Shoes',
+        price: 129.99,
+        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400',
+        description: 'Lightweight running shoes for daily training',
+        category: 'Footwear',
+    },
+    {
+        id: '3',
+        name: 'Smart Watch',
+        price: 199.99,
+        image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400',
+        description: 'Fitness tracking smart watch with heart rate monitor',
+        category: 'Electronics',
+    },
+    {
+        id: '4',
+        name: 'Backpack',
+        price: 49.99,
+        image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400',
+        description: 'Durable everyday backpack with laptop compartment',
+        category: 'Accessories',
+    },
+    {
+        id: '5',
+        name: 'Sunglasses',
+        price: 39.99,
+        image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400',
+        description: 'UV-protective polarized sunglasses',
+        category: 'Accessories',
+    },
+    {
+        id: '6',
+        name: 'Coffee Mug',
+        price: 14.99,
+        image: 'https://images.unsplash.com/photo-1517705008128-361805f42e86?w=400',
+        description: 'Ceramic coffee mug, 350ml',
+        category: 'Home',
+    },
+    {
+        id: '7',
+        name: 'Desk Lamp',
+        price: 34.99,
+        image: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400',
+        description: 'LED desk lamp with adjustable brightness',
+        category: 'Home',
+    },
+    {
+        id: '8',
+        name: 'Yoga Mat',
+        price: 24.99,
+        image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400',
+        description: 'Non-slip yoga mat, 6mm thick',
+        category: 'Fitness',
+    },
+]
