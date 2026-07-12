@@ -6,6 +6,7 @@ import { checkoutSchema, type CheckoutFormData } from "../schemas/checkoutSchema
 import { useCartStore } from "../store/useCartStore";
 import { useCartTotals } from "../hooks/useCart";
 import { OrderSuccess } from "../components/OrderSuccess";
+import {Header} from "../components/Header.tsx";
 
 export function CheckoutPage() {
     const items = useCartStore((state) => state.items);
@@ -38,10 +39,9 @@ export function CheckoutPage() {
     }
 
     return (
-        <div className="p-4">
-            <h1 className="mb-4 text-xl font-bold text-gray-900">Checkout</h1>
-
-            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+        <div>
+            <Header title="Checkout" />
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 p-4">
                 <div>
                     <label className="mb-1 block text-sm font-medium text-gray-700">
                         Full Name
