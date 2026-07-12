@@ -1,6 +1,6 @@
 import { useCartStore } from "../store/useCartStore.ts";
 
-export const useCartTotal = ()  => {
+export const useCartTotals = ()  => {
     const items = useCartStore((state) => state.items);
     const totalCount = items.reduce(
         (sum, i) => sum + i.quantity, 0);

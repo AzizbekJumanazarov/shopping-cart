@@ -1,16 +1,20 @@
-import { products } from "./data/products.ts";
-import { ProductCard } from './components/ProductCard.tsx';
+import { Routes, Route } from 'react-router-dom';
+import { ProductListPage } from './pages/ProductListPage';
+import { CartPage } from './pages/CartPage';
+import { CheckoutPage } from './pages/CheckoutPage';
+import { BottomNav } from './components/BottomNav';
 
 function App() {
-  return (
-      <div className="min-h-screen bg-gray-50 p-4">
-          <h1 className="mb-4 text-xl font-bold">Products</h1>
-          <div className="grid grid-cols-2 gap-3">
-              {products.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-              ))}
-          </div>
-      </div>
-  );
+    return (
+        <div className="min-h-screen bg-gray-50 pb-20">
+            <Routes>
+                <Route path="/" element={<ProductListPage />} />
+                <Route path="/cart" element={<CartPage />} />
+                <Route path="/checkout" element={<CheckoutPage />} />
+            </Routes>
+            <BottomNav />
+        </div>
+    );
 }
+
 export default App;
