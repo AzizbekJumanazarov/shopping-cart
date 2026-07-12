@@ -17,7 +17,7 @@ export interface CartState {
 }
 
 export interface CartActions {
-    addToCard: (product: Product) => void;
+    addToCart: (product: Product) => void;
     increaseQty: (productId: string) => void;
     decreaseQty: (productId: string) => void;
     removeFromCart: (productId: string) => void;
