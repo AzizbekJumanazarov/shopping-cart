@@ -6,9 +6,10 @@ import { QuantityControl } from "./QuantityControl.tsx";
 
 interface ProductCardProps {
     product: Product;
+    priority?: boolean;
 }
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, priority = false }: ProductCardProps) {
     const quantity = useCartItemQuantity(product.id);
     const addToCart = useCartStore((state) => state.addToCart);
     const increaseQty = useCartStore((state) => state.increaseQty);
@@ -20,7 +21,8 @@ export function ProductCard({ product }: ProductCardProps) {
                 src={product.image}
                 alt={product.name}
                 className="h-36 w-full object-cover"
-                loading="lazy"
+                loading={priority ? 'eager' : 'lazy'}
+                fetchPriority={priority ? 'high' : 'auto'}
             />
 
             <div className="flex flex-1 flex-col gap-1 p-3">
