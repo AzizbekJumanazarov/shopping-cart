@@ -10,7 +10,7 @@ export function BottomNav(){
     }`;
 
     return (
-        <nav className="fixed bottom-0 left-0 right-0 flex justify-around border-t border-gray-200 bg-white pb-safe">
+        <nav className="fixed bottom-0 w-full max-w-md flex justify-around border-t border-gray-200 bg-white pb-safe">
             <NavLink to="/" className={linkClass} end>
                 <Home size={20} />
                 Products
